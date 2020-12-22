@@ -61,13 +61,14 @@
             </div>
             <div class="form-div">
                 <form action="{{ url_for('predict')}}" method="post">
-                    <input type="text" name="rate" placeholder="Enter Rate" required="required">
-                    <input type="text" name="Sales in first month" placeholder="Enter Sales in Month 1" required="required">
-                    <input type="text" name="Sales in second month" placeholder="Enter Sales in Month 2" required="required">
+                    <input type="text" name="rating" placeholder="Enter Rate" required="required">
+                    <input type="text" name="sales_in_month_1" placeholder="Enter Sales in Month 1" required="required">
+                    <input type="text" name="sales_in_month_2" placeholder="Enter Sales in Month 2" required="required">
                     <button type="submit" class="btn black waves-effect waves-light">
                         Predict Sales in Month 3
                     </button>
                 </form>
+                <p style="font-size: 1.2em; margin-top: 10px;"> {{ prediction_text }} </p>  
             </div>
         </div>   
     </div>

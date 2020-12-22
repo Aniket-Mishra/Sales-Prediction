@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt
-import pickle
+import pickle # dump model into a pkl file
 from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv('custom_sales_data.csv')
@@ -17,6 +17,7 @@ def to_int(name):
 X['rating'] = X['rating'].apply(lambda x: to_int(x))
 
 y = df.loc[:, 'sales_in_month_3']
+print(y)
 
 linear_regressor = LinearRegression()
 
