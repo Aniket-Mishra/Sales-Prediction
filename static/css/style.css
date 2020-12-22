@@ -3,6 +3,12 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
+body{
+	background-color: black; 
+	overflow: hidden;
+	overflow-x: hidden !important; 
+	color: #eeeeee;
+}
 
 .nav-links {
 	display: flex;
@@ -19,7 +25,36 @@
 	text-decoration: none;
 	font-size: 17px;
 }
+.container-body {
+	background-color: #9e9e9e; 
+	width: 30%; margin: 5% auto; 
+	padding: 2.5%; 
+	text-align: center; 
+	border-radius: 10px;
+}
+.main-container{
+	text-align: center; 
+	width: 90%; 
+	margin: 0 auto; 
+	position: relative;
+}
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #222222 !important;
+	opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #222222 !important;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+	color: #222222 !important;
+  }
+
+.predict-button {
+	background-color: #222222 !important;
+}
 /* FOR MOBILE  */
 
 @media screen and (max-width: 360px) {
@@ -30,6 +65,21 @@
 	.footer-div ul {
 		text-align: center;
 	}
+	.container-body {
+		background-color: #9e9e9e; 
+		width: 90%; margin: 5% auto; 
+		padding: 2.5%; 
+		text-align: center; 
+		border-radius: 10px;
+		margin-top: 20%;
+	}
+	.main-container{
+		text-align: center; 
+		width: 80%; 
+		margin: 0 auto; 
+		position: relative;
+	}
+	
 }
 
 @media screen and (max-width: 810px) {
@@ -88,24 +138,18 @@
 	.nav-list {
 		font-size: 25px;
 	}
-
-	.nav-links li:nth-child(1) {
-		transition: all 0.5s ease 0.12s;
+	.container-body {
+		background-color: #9e9e9e; 
+		width: 90%; margin: 5% auto; 
+		padding: 2.5%; 
+		text-align: center; 
+		border-radius: 10px;
+		margin-top: 20%;
 	}
-	.nav-links li:nth-child(2) {
-		transition: all 0.5s ease 0.225s;
-	}
-	.nav-links li:nth-child(3) {
-		transition: all 0.5s ease 0.33s;
-	}
-	.nav-links li:nth-child(4) {
-		transition: all 0.5s ease 0.435s;
-	}
-	.nav-links li:nth-child(5) {
-		transition: all 0.5s ease 0.54s;
-	}
-
-	li.fade {
-		opacity: 1;
+	.main-container{
+		text-align: center; 
+		width: 80%; 
+		margin: 0 auto; 
+		position: relative;
 	}
 }

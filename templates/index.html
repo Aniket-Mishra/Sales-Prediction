@@ -23,7 +23,7 @@
       @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap');
     </style>
 </head>
-<body style="background-color: black; overflow: hidden; overflow-x: hidden !important; color: #eeeeee;">
+<body>
     <div class="navbar-fixed" id="home">
         <nav class="grey darken-4">
           <div class="container">
@@ -45,7 +45,6 @@
         </nav>
     </div>
     <ul class="sidenav" id="mobile-nav">
-
         <li>
             <a href="https://github.com/Aniket-Mishra/Sales-Prediction">Git Repo</a>
         </li>
@@ -54,17 +53,17 @@
         </li>
     </ul>
 
-    <div class="container" style="background-color: #222222; width: 80%; margin: 5% auto; padding: 2.5%; text-align: center;">
-        <div style="text-align: center; width: 80%; margin: 0 auto; position: relative;">
-            <div style="width: 90%; overflow: hidden;">
-                <p style="font-size: 2em;">MAKE PREDICTIONS</p>
+    <div class="container-body">
+        <div class="main-container" style="">
+            <div>
+                <p style="font-size: 2em; color: #222222;">MAKE PREDICTIONS</p>
             </div>
             <div class="form-div">
                 <form action="{{ url_for('predict')}}" method="post">
                     <input type="text" name="rating" placeholder="Enter Rate" required="required">
-                    <input type="text" name="sales_in_month_1" placeholder="Enter Sales in Month 1" required="required">
-                    <input type="text" name="sales_in_month_2" placeholder="Enter Sales in Month 2" required="required">
-                    <button type="submit" class="btn black waves-effect waves-light">
+                    <input type="text" name="sales_in_month_1" placeholder="Enter Sales in Month 1">
+                    <input type="text" name="sales_in_month_2" placeholder="Enter Sales in Month 2">
+                    <button type="submit" class="btn waves-effect waves-light predict-button">
                         Predict Sales in Month 3
                     </button>
                 </form>
@@ -74,8 +73,16 @@
     </div>
     <div class="footer-div">
         <div style="width: 100%; text-align: center; height: 30px; background-color: #222222; position: absolute; bottom: 0;">
-            Made with <span style="color: red;">&#10084;</span> by Aniket Mishra
+            Made with <span style="color: red;">&#10084;</span>
+            
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="dist/assets/js/app.js"></script> -->
+    <script>
+        // Sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {});
+    </script>
 </body>
 </html>
